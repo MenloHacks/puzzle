@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from django.views.generic import View
-import numpy as np
 from django.contrib.sessions.models import Session
 from django.http import HttpResponse
 
