@@ -85,9 +85,9 @@ DATABASES = {
 }
 
 #heroku settings
-# import dj_database_url
-# DATABASES = {}
-# DATABASES['default'] = dj_database_url.config()
+import dj_database_url
+DATABASES = {}
+DATABASES['default'] = dj_database_url.config()
 ALLOWED_HOSTS = ['*']
 
 # Password validation
