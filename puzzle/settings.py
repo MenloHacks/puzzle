@@ -52,12 +52,12 @@ MIDDLEWARE = [
 ]
 
 
-ROOT_URLCONF = 'puzzle.urls'
+ROOT_URLCONF = 'app.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, '/app/templates')]
+        'DIRS': [os.path.join(BASE_DIR, 'app/templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -85,9 +85,9 @@ DATABASES = {
 }
 
 #heroku settings
-import dj_database_url
-DATABASES = {}
-DATABASES['default'] = dj_database_url.config()
+# import dj_database_url
+# DATABASES = {}
+# DATABASES['default'] = dj_database_url.config()
 ALLOWED_HOSTS = ['*']
 
 # Password validation
