@@ -17,13 +17,12 @@ from django.conf.urls import url
 from django.contrib import admin
 
 from app import views
-
+import re
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.intro),
-    url(r'^GYGSLSIYCGTNXSTFTYTOIC/$', views.clue_2),
-    url(r'^thefirstthingyouthinkof/$', views.clue_2),
-    url(r'^correct/$', views.clue_2),
+    url(r'^reshapedtheimage/$', views.clue_1_5),
+    url(r'^turingisthebomb/$', views.clue_2),
     url(r'^sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=/$',
         views.clue_3)
 ]
