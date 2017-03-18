@@ -77,15 +77,20 @@ What is that about? If you’re like a lot of people, you looked this up and fig
 
 ## Part 2
 Now, we have a page that looks like this:
+
 ![Enigma](/media/Enigma.png "Enigma")
+
 This step should be easy, provided you saw the enigma information on the previous step. If we just enter the configuration from the previous step into an online enigma decoder, you’ll get that it says this:
 PUZZLEMENLOHACKSCOMTURINGISTHEBOMB
 Enigma can only decode capital letters, so this makes sense. Let's go to the
  next page.
 
 ## Part 3
+
 ![Integrity](/media/Integrity.png "Integrity")
+
 This one tripped up a lot of you. It’s fairly cryptic, and if you don’t know what it’s talking about, it’s hard to get. One thing I tried to do with this part of the puzzle is to make it easier for people who follow proper web dev protocols. Often, if you load a <script> tag in a page, you just put the src and not much else. However, if you’re loading from a cdn, it’s recommended to use SRI, which checks the code you’re getting with a cryptographic hash to make sure the file hasn’t been manipulated in transit. What does SRI stand for? Subresource Integrity. Let’s look for some of that on the page:
+
 ![Integrity Solution](/media/Integrity Solution.png "Integrity Solution")
 
 Look! We found a tag with an integrity attribute! Let’s paste that into the address bar to see if it works:
@@ -95,9 +100,13 @@ It worked!
 
 ## Part 4
 The next page looks like this:
+
 ![Login](/media/Login.png "Login")
+
 This looks like login credentials! Now, how do we use them? Well, remember the end goal of this is to send an announcement. Announcements are sent through live.menlohacks.com and the app. If you paid attention to my presentation, you’ll know that they both have the same backend: vivere. In the views.py for vivere, there’s an undocumented method that lets you post to /admin/announcements:
+
 ![Announcement Post](/media/announcementPost.png "Announcement Post")
+
 Here’s a sample solution (I wrote this solution during MenloHacks so I didn’t test it for obvious reasons, but it should work):
 ```
 $.ajax({
