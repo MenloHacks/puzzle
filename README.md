@@ -1,6 +1,6 @@
 # MenloHacks II Puzzle
 This was a puzzle developed for MenloHacks II. It was successfully solved by
- Akshay Srivatsan for a prize of $500. 
+ Akshay Srivatsan for a prize of $250. 
  
 ## Part 1
 There are three components to the first page of the puzzle.
