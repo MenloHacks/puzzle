@@ -91,7 +91,7 @@ Enigma can only decode capital letters, so this makes sense. Let's go to the
 
 This one tripped up a lot of you. It’s fairly cryptic, and if you don’t know what it’s talking about, it’s hard to get. One thing I tried to do with this part of the puzzle is to make it easier for people who follow proper web dev protocols. Often, if you load a <script> tag in a page, you just put the src and not much else. However, if you’re loading from a cdn, it’s recommended to use SRI, which checks the code you’re getting with a cryptographic hash to make sure the file hasn’t been manipulated in transit. What does SRI stand for? Subresource Integrity. Let’s look for some of that on the page:
 
-![Integrity Solution](/media/Integrity Solution.png "Integrity Solution")
+![Integrity Solution](/media/Integrity\ Solution.png "Integrity Solution")
 
 Look! We found a tag with an integrity attribute! Let’s paste that into the address bar to see if it works:
 puzzle.menlohacks.com/sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=
